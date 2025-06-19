@@ -3,24 +3,78 @@
 <head>
   <title>My Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
-    h1 { color: #333; }
-    a { color: #0366d6; text-decoration: none; }
-    .project { margin-bottom: 20px; border: 1px solid #eee; padding: 15px; border-radius: 5px; }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+    }
+    h1, h2 { color: #2c3e50; }
+    a { color: #3498db; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    section { margin-bottom: 40px; }
+    .essay, .project, .game {
+      background: #f9f9f9;
+      border-left: 4px solid #3498db;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 0 5px 5px 0;
+    }
+    .game { border-left-color: #e74c3c; }
+    .essay { border-left-color: #2ecc71; }
   </style>
 </head>
 <body>
   <h1>Hello! I'm [Your Name]</h1>
-  <p>Welcome to my coding portfolio. Here are my projects:</p>
-  
-  <div class="project">
-    <h2>Project 1</h2>
-    <p>Description of your project. <a href="#">GitHub Link</a></p>
-  </div>
-  
-  <div class="project">
-    <h2>Project 2</h2>
-    <p>Description of your project. <a href="#">GitHub Link</a></p>
-  </div>
+  <p>Welcome to my portfolio. I write essays, build projects, and create games.</p>
+
+  <!-- Essays Section -->
+  <section>
+    <h2>📝 Essays</h2>
+    <div class="essay">
+      <h3>Why I Love Programming</h3>
+      <p>Coding is like solving puzzles—it challenges my brain and lets me create things from nothing. Plus, the community is full of passionate people who share knowledge freely.</p>
+    </div>
+    <div class="essay">
+      <h3>The Future of AI</h3>
+      <p>AI will transform industries, but ethical guidelines are crucial. We need to ensure it benefits everyone, not just a few corporations.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section>
+    <h2>💻 Projects</h2>
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>A React app that fetches real-time weather data using the OpenWeather API. <a href="#">GitHub Link</a></p>
+    </div>
+    <div class="project">
+      <h3>Task Manager</h3>
+      <p>A CLI tool in Python to organize daily tasks with priority sorting. <a href="#">GitHub Link</a></p>
+    </div>
+  </section>
+
+  <!-- Games Section -->
+  <section>
+    <h2>🎮 Games</h2>
+    <div class="game">
+      <h3>Space Invaders Clone</h3>
+      <p>A browser-based game using JavaScript and Canvas. Shoot aliens before they reach Earth! <a href="#">Play Here</a></p>
+    </div>
+    <div class="game">
+      <h3>Word Puzzle</h3>
+      <p>A Scrabble-like game built with Python and Pygame. Supports multiplayer mode. <a href="#">GitHub Link</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>🔗 Connect with me: 
+      <a href="https://github.com/yourusername">GitHub</a> | 
+      <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+    </p>
+  </footer>
 </body>
 </html>
