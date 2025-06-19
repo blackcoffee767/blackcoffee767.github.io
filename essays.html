@@ -1,11 +1,52 @@
-<header>
-  <nav>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="essays.html">Essays</a>
-      <a href="projects.html">Projects</a>
-      <a href="games.html">Games</a>
-    </div>
-    <button class="theme-toggle" id="themeToggle">🌓</button>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Essays</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="essays.html" class="active">Essays</a>
+        <a href="projects.html">Projects</a>
+        <a href="games.html">Games</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="essays">
+      <h2>📝 Essays</h2>
+      
+      <article class="essay">
+        <h3>The Joy of Problem Solving</h3>
+        <p>Programming isn't just about writing code - it's about breaking down complex problems into manageable pieces. The satisfaction of seeing a solution come together is what keeps me coding late into the night.</p>
+        <div class="meta">Published: October 15, 2023</div>
+      </article>
+      
+      <article class="essay">
+        <h3>Ethics in AI Development</h3>
+        <p>As artificial intelligence becomes more powerful, developers have an increasing responsibility to consider the societal impacts of their work. We need to build systems that are fair, transparent, and beneficial to all.</p>
+        <div class="meta">Published: November 2, 2023</div>
+      </article>
+      
+      <article class="essay">
+        <h3>Why Documentation Matters</h3>
+        <p>Great code without documentation is like a brilliant novel written in a forgotten language. Taking the time to document your work properly saves countless hours for future developers (including yourself!).</p>
+        <div class="meta">Published: November 20, 2023</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 My Portfolio | <a href="index.html">Return Home</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
