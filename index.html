@@ -4,279 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #333333;
-      --primary-color: #3498db;
-      --secondary-color: #2ecc71;
-      --accent-color: #e74c3c;
-      --card-bg: #f9f9f9;
-    }
-    
-    [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #f5f5f5;
-      --primary-color: #5dade2;
-      --secondary-color: #58d68d;
-      --accent-color: #ec7063;
-      --card-bg: #1e1e1e;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: all 0.3s ease;
-    }
-
-    header {
-      background-color: var(--primary-color);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links a {
-      color: white;
-      font-weight: 500;
-      padding: 0.5rem 0;
-      position: relative;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.9;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: white;
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .theme-toggle {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-
-    main {
-      padding: 2rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-      scroll-margin-top: 80px;
-    }
-
-    h1 {
-      color: var(--primary-color);
-      margin-bottom: 1.5rem;
-    }
-
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--primary-color);
-    }
-
-    h3 {
-      color: var(--text-color);
-    }
-
-    .essay, .project, .game {
-      background-color: var(--card-bg);
-      border-left: 4px solid;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 0 8px 8px 0;
-      transition: transform 0.2s ease;
-    }
-
-    .essay:hover, .project:hover, .game:hover {
-      transform: translateX(5px);
-    }
-
-    .essay {
-      border-left-color: var(--secondary-color);
-    }
-
-    .project {
-      border-left-color: var(--primary-color);
-    }
-
-    .game {
-      border-left-color: var(--accent-color);
-    }
-
-    a {
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: var(--primary-color);
-      color: white;
-      margin-top: 2rem;
-    }
-
-    footer a {
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      
-      .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-  <nav>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="essays.html">Essays</a>
-      <a href="projects.html">Projects</a>
-      <a href="games.html">Games</a>
-    </div>
-    <button class="theme-toggle" id="themeToggle">🌓</button>
-  </nav>
-</header>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="essays.html">Essays</a>
+        <a href="projects.html">Projects</a>
+        <a href="games.html">Games</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle">🌓</button>
+    </nav>
+  </header>
 
   <main>
-    <h1>Hello! I'm [Your Name]</h1>
-    <p>Welcome to my portfolio. I write essays, build projects, and create games.</p>
-
-    <!-- Essays Section -->
-    <section id="essays">
-      <h2>📝 Essays</h2>
-      <div class="essay">
-        <h3>Why I Love Programming</h3>
-        <p>Coding is like solving puzzles—it challenges my brain and lets me create things from nothing. Plus, the community is full of passionate people who share knowledge freely.</p>
-      </div>
-      <div class="essay">
-        <h3>The Future of AI</h3>
-        <p>AI will transform industries, but ethical guidelines are crucial. We need to ensure it benefits everyone, not just a few corporations.</p>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>💻 Projects</h2>
-      <div class="project">
-        <h3>Weather App</h3>
-        <p>A React app that fetches real-time weather data using the OpenWeather API. <a href="#">GitHub Link</a></p>
-      </div>
-      <div class="project">
-        <h3>Task Manager</h3>
-        <p>A CLI tool in Python to organize daily tasks with priority sorting. <a href="#">GitHub Link</a></p>
-      </div>
-    </section>
-
-    <!-- Games Section -->
-    <section id="games">
-      <h2>🎮 Games</h2>
-      <div class="game">
-        <h3>Space Invaders Clone</h3>
-        <p>A browser-based game using JavaScript and Canvas. Shoot aliens before they reach Earth! <a href="#">Play Here</a></p>
-      </div>
-      <div class="game">
-        <h3>Word Puzzle</h3>
-        <p>A Scrabble-like game built with Python and Pygame. Supports multiplayer mode. <a href="#">GitHub Link</a></p>
-      </div>
+    <section class="hero">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Explore my work through the navigation above</p>
     </section>
   </main>
 
   <footer>
-    <p>🔗 Connect with me: 
-      <a href="https://github.com/yourusername">GitHub</a> | 
-      <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+    <p>© 2023 My Portfolio | Connect with me on 
+      <a href="https://github.com/yourusername">GitHub</a>
     </p>
   </footer>
 
-  <script>
-    // Dark Mode Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-    
-    // Check for saved theme preference
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-      body.setAttribute('data-theme', currentTheme);
-      updateToggleIcon();
-    }
-
-    themeToggle.addEventListener('click', () => {
-      if (body.getAttribute('data-theme') === 'dark') {
-        body.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-      } else {
-        body.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-      updateToggleIcon();
-    });
-
-    function updateToggleIcon() {
-      if (body.getAttribute('data-theme') === 'dark') {
-        themeToggle.textContent = '🌞';
-      } else {
-        themeToggle.textContent = '🌓';
-      }
-    }
-
-    // Smooth scrolling for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
