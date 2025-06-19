@@ -1,11 +1,76 @@
-<header>
-  <nav>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="essays.html">Essays</a>
-      <a href="projects.html">Projects</a>
-      <a href="games.html">Games</a>
-    </div>
-    <button class="theme-toggle" id="themeToggle">🌓</button>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Games</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="essays.html">Essays</a>
+        <a href="projects.html">Projects</a>
+        <a href="games.html" class="active">Games</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="games">
+      <h2>🎮 Game Projects</h2>
+      
+      <div class="game">
+        <div class="game-thumbnail">
+          <img src="images/space-invaders-thumb.jpg" alt="Space Invaders Clone" width="300">
+        </div>
+        <div class="game-info">
+          <h3>Space Invaders Clone</h3>
+          <p>A JavaScript canvas game featuring wave-based enemies and power-ups. Built with pure JavaScript and HTML5 Canvas.</p>
+          <div class="game-links">
+            <a href="games/space-invaders" class="btn">Play Online</a>
+            <a href="https://github.com/yourusername/space-invaders" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="game">
+        <div class="game-thumbnail">
+          <img src="images/word-puzzle-thumb.jpg" alt="Word Puzzle Game" width="300">
+        </div>
+        <div class="game-info">
+          <h3>Word Puzzle Challenge</h3>
+          <p>A Scrabble-inspired word game with multiplayer support. Built with Python and Pygame, featuring a 50,000-word dictionary.</p>
+          <div class="game-links">
+            <a href="games/word-puzzle/download" class="btn">Download</a>
+            <a href="https://github.com/yourusername/word-puzzle" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="game">
+        <div class="game-thumbnail">
+          <img src="images/platformer-thumb.jpg" alt="2D Platformer" width="300">
+        </div>
+        <div class="game-info">
+          <h3>2D Platformer Adventure</h3>
+          <p>A Unity-based platformer with 10 levels, custom physics, and original artwork. Features a level editor mode.</p>
+          <div class="game-links">
+            <a href="games/platformer" class="btn">Web Version</a>
+            <a href="https://github.com/yourusername/2d-platformer" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 My Portfolio | <a href="index.html">Return Home</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
